@@ -1,38 +1,41 @@
 # Arrays
 
-Used to store a list of items sequentially in memory
+Used to store a list of items (strings, numbers, objects etc) sequentially in memory
 
 # Runtime of Operations
 
 ## LookUp : O(1)  
 
+- Given its index, calculation of the memory address of an item in an array is fast and straight forward. Its retrieval occurs at constant time.
+
 ## Insertion : O(n)
 
-**Best Case** : When the array is not full and so the item is inserted at the next available index  
+- **Best Case** : When the array is not full and so the item is inserted at the end of the array. This happens in O(1)
 
-**Worst Case 1**: When the array is full and we have to create a large array, copying the contents of the previous array into the new one in the process.
+- **Worst Case 1**: When the array is full and a larger array is created to accommodate incoming items and the subsequent copying of the contents of the previous array into the new one in the process. **Copying/Transferring items into new array happens in O(n)**
 
-**Worst Case 2**: When we have to insert at the beginning. We have to shift the other items to the right to make space for the item to be inserted.
+- **Worst Case 2**: Insertion at the beginnin of array. The other items are shifted to the right to make space for the new item to be inserted. This happens in O(n)
 
 ## Removal : O(n)
 
-**Best Case** : If the item is at the end, its memory is cleared
-**Worst Case** : If the item to be removed is the beginning. The rest of the items need to be shifted to the left to fill the hole created.
+- **Best Case** : If the item is at the end, look it up by index and clear memory(set to null). Happens in O(1)
 
+- **Worst Case** : If the item to be removed is in the beginning. The rest of the items need to be shifted to the left to fill the hole created. **Shifting the items to fill the hole occurs in O(n)**
 
 # Limitations
 
-Arrays are static. we need to specify a size at the time of allocation. This size cannot change.
+- In many languages, arrays are static. A definite size must be specified at the time of allocation.
 
-If we dont know the size ahead of time and we set a large size, we might end up wasting memory.
-if we set a smaller size, the array gets filled up quickly and we have to create a new larger array if we want to add more items. Additionally we have to transfer the items from the previous array into the new one.
+- If the size is not known ahead of time, a large size can be set but might end up wasting memory.
 
-To add another time, we need to resize.
-This is done by allocae a larer array and copy all the items of the previous array into the new one. This is very costly.
+- if a smaller size is set, the array gets filled up quickly and a new larger array is allocated if more items are be to inserted. Items from the old array are also copied into the new array.
 
+- In situations where the number of items to add is unknown or when a lot of items need to be removed, arrays won't perform well.
 
+# Overcoming Limitations
 
-# Other Options
+1. Dynamic arrays : Dynamic arrays are basically arrays that can shrink and grow with respect to
+
 because array have a fixed size, in situations where we dont know how many items, or we need to add/remove large or remove a lot items,they dont perform well.
 
 In that case we can use dynamic arrays (Vector and ArrayList in Java) or LinkedLists.
