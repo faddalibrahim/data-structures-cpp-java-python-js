@@ -34,12 +34,14 @@ Used to store a list of items (strings, numbers, objects etc) sequentially in me
 
 # Overcoming Limitations
 
-1. Dynamic arrays : Dynamic arrays are basically arrays that can shrink and grow with respect to
+Because arrays have a fixed size, in situations where we dont know how many items we need to add/remove or in situations where we remove a lot items, they dont perform well. Dynamic Arrays can offset this limitation but still with performance and memory issues.
 
-because array have a fixed size, in situations where we dont know how many items, or we need to add/remove large or remove a lot items,they dont perform well.
+Arrays are however dynamic in some programming languages like python and javascript.
 
-In that case we can use dynamic arrays (Vector and ArrayList in Java) or LinkedLists.
+Java has 2 in-built implementations of dynamic arrays:
 
-Arrays in Java
-```java
-```
+1. Vector
+   - grows by 100% of its size when it gets full size
+   - all methods are synchronized (only a single thread can access that method)
+2. ArrayList
+   - grows by 50% of its size when it gets full size
