@@ -4,9 +4,10 @@ Used to store a list of items (strings, numbers, objects etc) sequentially in me
 
 # Runtime of Operations
 
-## LookUp : O(1)  
+## LookUp : O(1) / O(n)
 
 - Given its index, calculation of the memory address of an item in an array is fast and straight forward. Its retrieval occurs at constant time.
+- If we are looking up an item by value, its O(n) because in the worst case, the item could be at the end of the array. Hence, traversing all the way to the end to find it.
 
 ## Insertion : O(n)
 
@@ -45,3 +46,5 @@ Java has 2 in-built implementations of dynamic arrays:
    - all methods are synchronized (only a single thread can access that method)
 2. ArrayList
    - grows by 50% of its size when it gets full size
+
+With Linkedlists, we don't have to know ahead of time how many items we need to add/remove. Linkedlists inherently grow and shrink dynamically. Nevertheless, they have their shortcomings as well.
