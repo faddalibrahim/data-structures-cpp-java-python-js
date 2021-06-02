@@ -48,3 +48,10 @@ Java has 2 in-built implementations of dynamic arrays:
    - grows by 50% of its size when it gets full size
 
 With Linkedlists, we don't have to know ahead of time how many items we need to add/remove. Linkedlists inherently grow and shrink dynamically. Nevertheless, they have their shortcomings as well.
+
+### Todo
+
+1. Add illustrations and gif to demonstrate operations
+2. Javadocs for dynamic array implementations
+3. Include some new methods -- insertAt, reverse, intersect, max
+4. Demonstrate use of in-build arrays in each language
