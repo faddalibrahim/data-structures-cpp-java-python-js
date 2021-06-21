@@ -32,9 +32,9 @@ public class LinkedList {
     }
 
     /**
-     * appends an item to the linkedlist
+     * Appends an item to the linkedlist
      * 
-     * @param newItem
+     * @param newItem the item to be appended
      */
     public void addLast(int newItem) {
         Node node = new Node(newItem);
@@ -48,9 +48,9 @@ public class LinkedList {
     }
 
     /**
-     * prepends an item to the linkedlist
+     * Prepends an item to the linkedlist
      * 
-     * @param newItem
+     * @param newItem the item to be prepended
      */
     public void addFirst(int newItem) {
         Node node = new Node(newItem);
@@ -64,21 +64,43 @@ public class LinkedList {
     }
 
     /**
-     * helper function to check if linkedlist is empty
+     * Method to check if linkedlist is empty
      * 
-     * @return either true or false depending on if the head is null
+     * @return either true if head is null, otherwise false
      */
     private boolean isEmpty() {
         return head == null;
     }
 
+    /**
+     * Returns the index of an item in the linkedlist
+     * 
+     * @param item The time whose index we are looking for
+     * @return the index of the item. value is -1 if item was not found
+     */
     public int indexOf(int item) {
-
+        Node currentNode = head;
+        int index = 0;
+        while (currentNode != null) {
+            if (currentNode.value == item)
+                return index;
+            currentNode = currentNode.next;
+            index++;
+        }
+        return -1;
     }
-    // addFirst
-    // addLast
+
+    /**
+     * Checks if an item exists in the linkedlist
+     * 
+     * @param item The item to be searched for
+     * @return true if item was found, false otherwise
+     */
+    public boolean contains(int item) {
+
+        return indexOf(item) != -1;
+    }
     // deleteFirst
     // deleteLast
     // contains
-    // indexOf
 }
