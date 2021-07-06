@@ -5,17 +5,26 @@
 
 package linkedlist.singly.java;
 
+import java.util.NoSuchElementException;
+
 /**
  * 
  * @author faddalibrahim
- * 
- *         class: LinkedList
- * 
- *         Accessibility Modifier: public
+ * @version 1.0
+ * @since 1.0 class: LinkedList
  */
 public class LinkedList {
+    /**
+     * Represents the head of the linkedlist
+     */
     private Node head;
+
+    /**
+     * Returns the tail of the linedlist
+     */
     private Node tail;
+
+    private int size;
 
     private class Node {
         private int value;
@@ -45,6 +54,8 @@ public class LinkedList {
             tail.next = node;
             tail = node;
         }
+
+        size++;
     }
 
     /**
@@ -61,6 +72,8 @@ public class LinkedList {
             node.next = head;
             head = node;
         }
+
+        size++;
     }
 
     /**
@@ -99,6 +112,58 @@ public class LinkedList {
     public boolean contains(int item) {
 
         return indexOf(item) != -1;
+    }
+
+    public void removeFirst() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        if (head == tail) {
+            head = tail = null;
+            size = 0;
+            return;
+        }
+
+        Node second = head.next;
+        head.next = null;
+        head = second;
+
+        size--;
+    }
+
+    public void removeLast() {
+
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        // if there is only one item
+        if (head == tail) {
+            head = tail = null;
+            size = 0;
+            return;
+        }
+
+        Node previous = getPrevious(tail);
+        tail = previous;
+        tail.next = null;
+
+        size--;
+    }
+
+    private Node getPrevious(Node node) {
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            if (currentNode.next == node)
+                return currentNode;
+            currentNode = currentNode.next;
+        }
+        return null;
+    }
+
+    public int size() {
+        return size;
     }
     // deleteFirst
     // deleteLast
