@@ -18,7 +18,7 @@
 
 - **At the end** : Create a new node and have the tail point to it and set the tail to reference this new node **O(1)**
 
-- **A the beginning**: Create a new node, link it to the head and change the head to point to this new node : **O(1)**
+- **At the beginning**: Create a new node, link it to the head and change the head to point to this new node : **O(1)**
 
 - **In the middle** (say after the 10th node) : we have to traverse to the 10th node and update the links **O(n)**
 
@@ -31,6 +31,7 @@
 
 
 # Limitations
+extra memory to store next node
 
 
 
@@ -40,3 +41,14 @@
 
 ### Todo
 
+
+
+Operations | Arrays | LinkedLists |
+| --- | --- | --- |
+| Lookup By Index | O(1) | O(n)  
+| Lookup By value | O(n) | O(n)  
+| Insert(begining/end) | O(n) | O(1)
+| Insert (middle) | O(n) | O(n)
+| Delete(begining) | O(n) | O(1)
+| Delete(middle) | O(n) | O(n)
+| Delete(end) | O(n) | O(n)

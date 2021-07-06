@@ -165,6 +165,17 @@ public class LinkedList {
     public int size() {
         return size;
     }
+
+    public int[] toArray() {
+        int[] array = new int[size];
+        Node currentNode = head;
+        int index = 0;
+        while (currentNode != null) {
+            array[index++] = currentNode.value;
+            currentNode = currentNode.next;
+        }
+        return array;
+    }
     // deleteFirst
     // deleteLast
     // contains
