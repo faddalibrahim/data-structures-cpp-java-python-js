@@ -1,11 +1,18 @@
 # Content
 
-My personal notes taken on Algorithms and Data Structures (including implementations) from the youtube channels of:
+Comprehensive notes on Algorithms and Data Structures including implementations in **python**, **javascript**, **c++** and **java**
 
-1. Mosh Hamedani
+Resources Used
+
+1. Mosh Hamedani (<https://www.youtube.com/watch?v=BBpAmxU_NQo>)
 2. CS Dojo
 3. Hackerrank
 4. mycodeschool
 5. freecodecamp
 6. academind
 7. academic 20CL
+
+Contributors
+
+- Faddal Ibrahim
+- Cornelius Boateng

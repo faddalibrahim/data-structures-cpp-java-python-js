@@ -20,7 +20,7 @@ public class LinkedList {
     private Node head;
 
     /**
-     * Returns the tail of the linedlist
+     * Returns the tail of the linkedlist
      */
     private Node tail;
 
