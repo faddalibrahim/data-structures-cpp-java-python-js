@@ -178,6 +178,8 @@ public class LinkedList {
     }
 
     public void reverse() {
+        if (isEmpty())
+            return;
         Node previous = head;
         Node current = head.next;
 
