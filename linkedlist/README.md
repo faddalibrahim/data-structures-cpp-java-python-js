@@ -43,12 +43,19 @@ extra memory to store next node
 
 
 
-Operations | Arrays | LinkedLists |
-| --- | --- | --- |
-| Lookup By Index | O(1) | O(n)  
-| Lookup By value | O(n) | O(n)  
-| Insert(begining/end) | O(n) | O(1)
-| Insert (middle) | O(n) | O(n)
-| Delete(begining) | O(n) | O(1)
-| Delete(middle) | O(n) | O(n)
-| Delete(end) | O(n) | O(n)
+Operations | Array | LinkedList | Dynamic Array
+| --- | --- | --- | --- |
+| Lookup By Index | O(1) | O(n)  | O(1)
+| Lookup By value | O(n) | O(n)  | O(n)
+| Insert(begining) | O(n) | O(1) | O(n)
+| Insert (middle) | O(n) | O(n) | O(n)
+| Insert(end) | O(n) | O(1) | O(n)
+| Delete(begining) | O(n) | O(1) | O(n)
+| Delete(middle) | O(n) | O(n) | O(n)
+| Delete(end) | O(1) | O(n) , O(1) if doublylinked | O(n)
+
+With doubly-linkedlists, deleting an item from the end would be O(1). Since the last item has reference to the penultimate, there is no need to traverse sequentially to find the penultimate item.
+
+This comes with the cost of an extra memory to hold the address of the previous node. This can be negligible for the performance gain when removing an item from the end
+
+> the linked list class in java is an implementation of doubly linked list

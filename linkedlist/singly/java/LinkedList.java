@@ -176,6 +176,33 @@ public class LinkedList {
         }
         return array;
     }
+
+    public void reverse() {
+        Node previous = head;
+        Node current = head.next;
+
+        while (current != null) {
+            // get the node after current
+            Node next = current.next;
+
+            // change link direction
+            current.next = previous;
+
+            // move reference one step forward
+            previous = current;
+            current = next;
+        }
+
+        // tail should not point to any node
+        tail = head;
+        tail.next = null;
+
+        // on the last iteration, previous would refer to the last item(which is now our
+        // head)
+        head = previous;
+
+    }
+
     // deleteFirst
     // deleteLast
     // contains
