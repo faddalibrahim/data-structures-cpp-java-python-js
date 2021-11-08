@@ -7,7 +7,9 @@ class Node {
 
 class SinglyLinkedList {
   head = null;
-  tail = null;
+    tail = null;
+    
+    static isEmpty()
 
   addLast(data) {
     let newNode = new Node(data);
