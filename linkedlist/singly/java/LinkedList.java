@@ -205,6 +205,11 @@ public class LinkedList {
 
     }
 
+    public Node getKthFromTheEnd(int k){
+    //    Node pointerOne = 
+    //    Node pointerTwo = 
+    }
+
     // deleteFirst
     // deleteLast
     // contains
