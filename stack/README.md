@@ -10,6 +10,7 @@ Stacks can be implemented with Arrays or LinkedLists
 - build compilers (e.g syntax checking)
 - evaluate arithmetic expressions (e.g 1 + 2 \*3)
 - build navigation (e.g forward/back)
+- used in depth-first search to keep track of which nodes to visit next
 
 # Runtime of Operations
 
@@ -32,3 +33,8 @@ tells if the stack is empty or not
 # Limitations
 
 # Overcoming Limitations
+
+# TODO
+
+- implement stack with linked list
+- implement in other languages
