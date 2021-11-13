@@ -19,7 +19,7 @@ Adds an item on top of the stack
 
 ## pop() : O(1)
 
-Removes an item on the top of the stack
+Removes and returns the item on the top of the stack
 
 ## peek() : O(1)
 
