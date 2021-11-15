@@ -12,6 +12,9 @@ public class Q {
         queue.add(3);
     }
 
+    // Dequeue into a stack
+    // Pop back from stack into queue
+    
     public static void reverse(Queue<Integer> queue) {
         Stack<Integer> stack = new Stack<Integer>();
         while (!queue.isEmpty()) {
