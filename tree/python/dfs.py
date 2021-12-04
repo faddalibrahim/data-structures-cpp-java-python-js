@@ -31,11 +31,44 @@ class BinaryTree(object):
 
         return values
 
+    def includes(self, start, target):
+        if start:
+            if start.value == target: 
+                return True
+            else:
+                return self.includes(start.left, target) or self.includes(start.right, target)
+        return False
+
+    def sum(self,start):
+        if not start:
+            return 0
+        return start.value + self.sum(start.left) + self.sum(start.right)
+
+    def min_recursive(self,start):
+        if not start:
+            return float('inf')
+
+        leftMin = self.min_recursive(start.left)
+        rightMin = self.min_recursive(start.right)
+
+        return min(start.value,leftMin, rightMin)
+
+    def max_recursive(self,start):
+        if not start:
+            return -float('inf')
+
+        leftMin = self.max_recursive(start.left)
+        rightMin = self.max_recursive(start.right)
+
+        return max(start.value,leftMin, rightMin)
+
+
+
 
 # Set up tree
 tree = BinaryTree(1)
 tree.root.left = Node(2)
-tree.root.right = Node(3)
+tree.root.right = Node(3) 
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
 
@@ -58,4 +91,5 @@ tree.root.left.right = Node(5)
 # tree.depth_first_values()
 # print(tree.dfs_preorder_recursive(tree.root,[]))
 
-tree.bfs_iterative()
+# print(tree.min_recursive(tree.root))
+print(tree.max_recursive(tree.root))

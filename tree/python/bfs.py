@@ -26,14 +26,14 @@ class BinaryTree(object):
             if current.right:
                 q.append(current.right)
 
-    def includes(self,value_to_find):
+    def includes(self,target ):
         q = deque()
         q.append(self.root)
         
         while len(q):
             current = q.popleft()
             
-            if current.value == value_to_find:
+            if current.value == target :
                 return True
                 
             if current.left:
@@ -61,6 +61,45 @@ class BinaryTree(object):
                 
         return summ
 
+    def min(self):
+        q = deque()
+        q.append(self.root)
+        
+        minn = self.root.value
+        
+        while len(q):
+            current = q.popleft()
+            
+            if current.value < minn:
+                minn = current.value
+                
+            if current.left:
+                q.append(current.left)
+            if current.right:
+                q.append(current.right)
+                
+        return minn
+
+    def max(self):
+        q = deque()
+        q.append(self.root)
+        
+        maxx = self.root.value
+        
+        while len(q):
+            current = q.popleft()
+            
+            if current.value > maxx:
+                maxx = current.value
+                
+            if current.left:
+                q.append(current.left)
+            if current.right:
+                q.append(current.right)
+                
+        return maxx
+
+
 # Set up tree
 tree = BinaryTree(1)
 tree.root.left = Node(2)
@@ -87,4 +126,5 @@ tree.root.left.right = Node(5)
 # tree.depth_first_values()
 # print(tree.dfs_preorder_recursive(tree.root,[]))
 
-tree.bfs_iterative()
+# tree.bfs_iterative()
+print(tree.max())
