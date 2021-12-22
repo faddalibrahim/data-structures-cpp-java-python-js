@@ -52,7 +52,34 @@ class LinkedList:
         self.tail.next = new_node
         self.tail = new_node
 
-   
+    def delete_first(self):
+        if not self.head:
+            raise TypeError("value is None")
+
+        if self.head == self.tail:
+            self.head = self.tail = None
+            return
+
+        second = self.head.next
+        self.head.next = None
+        self.head = second
+
+    
+    def delete_last(self):
+        if not self.tail:
+            raise TypeError("value is None")
+
+        if self.head == self.tail:
+            self.head = self.tail = None
+            return
+
+        current = self.head
+        while current.next != self.tail:
+            current = current.next
+
+        self.tail = current
+        current.next = None
+
 
    
 
@@ -63,8 +90,14 @@ ll = LinkedList()
 # ll.add_last(34)
 
 ll.add_first(12)
-ll.add_first(90)
-ll.add_first(67)
-ll.add_first(34)
+# ll.add_first(90)
+# ll.add_first(67)
+# ll.add_first(34)
 
+# print(ll)
+
+# print(ll)
+# ll.delete_first()
+print(ll)
+ll.delete_last()
 print(ll)
