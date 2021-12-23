@@ -148,6 +148,24 @@ class LinkedList:
         self.tail.next = None
         self.head = previous
 
+    def kth_node(self,k):
+        pointer_1 = self.head
+        pointer_2 = self.head
+
+        index = 0
+
+        #setting the second pointer
+        while index < k:
+            pointer_2 = pointer_2.next
+            index += 1
+
+        #finding kth node
+        while pointer_2:
+            pointer_2 = pointer_2.next
+            pointer_1 = pointer_1.next
+
+        return pointer_1.value
+        
         
 
 
@@ -155,17 +173,24 @@ class LinkedList:
 
 ll = LinkedList()
 # print(ll.head.next)
-ll.add_last(90)
-ll.add_last(67)
-ll.add_last(34)
-ll.add_last(100)
+# ll.add_last(90)
+# ll.add_last(67)
+# ll.add_last(34)
+# ll.add_last(100)
 
 print(ll)
-ll.reverse()
-print(ll)
-print(ll)
+print(ll.kth_node(1))
+# print(ll.kth_node(2))
+# print(ll.kth_node(3))
+# print(ll.kth_node(4))
+# print(ll.kth_node(5))
 
-print(ll.tail == ll.head)
+# print(ll)
+# ll.reverse()
+# print(ll)
+# print(ll)
+
+# print(ll.tail == ll.head)
 # print(ll.head.value)
 
 # print(ll.value_at(0))
