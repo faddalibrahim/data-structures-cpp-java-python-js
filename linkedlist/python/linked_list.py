@@ -87,6 +87,16 @@ class LinkedList:
         self.tail = penultimate
         self.tail.next = None
 
+    def delete_node_at(self,position):
+        if is_empty():
+            raise IndexError
+
+        index = 0
+        current = self.head
+
+
+        
+
     def get_penultimate(self):
         penultimate = self.head
 
@@ -165,6 +175,17 @@ class LinkedList:
             pointer_1 = pointer_1.next
 
         return pointer_1.value
+
+    def print_reverse(self,head):
+        if not head:
+            return
+
+        self.print_reverse(head.next)
+        print(head.value)
+
+    # def clone()
+    # def detect_cycle()
+    # def to_array()
         
         
 
@@ -173,13 +194,16 @@ class LinkedList:
 
 ll = LinkedList()
 # print(ll.head.next)
-# ll.add_last(90)
-# ll.add_last(67)
-# ll.add_last(34)
-# ll.add_last(100)
+ll.add_last(90)
+ll.add_last(67)
+ll.add_last(34)
+ll.add_last(100)
 
 print(ll)
-print(ll.kth_node(1))
+# ll.print_reverse(ll.head)
+
+# print(ll)
+# print(ll.kth_node(1))
 # print(ll.kth_node(2))
 # print(ll.kth_node(3))
 # print(ll.kth_node(4))
