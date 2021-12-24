@@ -2,7 +2,7 @@
 
 LIFO : Last In First Out
 
-Stacks can be implemented with Arrays or LinkedLists
+Stacks can be implemented with Dynamic Arrays or LinkedLists (addLast for push, deleteLast for pop)
 
 ## Uses
 
@@ -11,6 +11,7 @@ Stacks can be implemented with Arrays or LinkedLists
 - evaluate arithmetic expressions (e.g 1 + 2 \*3)
 - build navigation (e.g forward/back)
 - used in depth-first search to keep track of which nodes to visit next
+- string parsing (valid parentheses, simplify path)
 
 # Runtime of Operations
 

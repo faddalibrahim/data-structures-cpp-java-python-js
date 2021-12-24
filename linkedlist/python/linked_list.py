@@ -83,16 +83,21 @@ class LinkedList:
             self.head = self.tail = None
             return
 
+        deleted_value = self.tail.value
+        
+        #reset tail
         penultimate = self.get_penultimate()
         self.tail = penultimate
         self.tail.next = None
 
-    def delete_node_at(self,position):
-        if is_empty():
-            raise IndexError
+        return deleted_value
 
-        index = 0
-        current = self.head
+    # def delete_node_at(self,position):
+    #     if is_empty():
+    #         raise IndexError
+
+    #     index = 0
+    #     current = self.head
 
 
         
@@ -186,57 +191,3 @@ class LinkedList:
     # def clone()
     # def detect_cycle()
     # def to_array()
-        
-        
-
-
-   
-
-ll = LinkedList()
-# print(ll.head.next)
-ll.add_last(90)
-ll.add_last(67)
-ll.add_last(34)
-ll.add_last(100)
-
-print(ll)
-# ll.print_reverse(ll.head)
-
-# print(ll)
-# print(ll.kth_node(1))
-# print(ll.kth_node(2))
-# print(ll.kth_node(3))
-# print(ll.kth_node(4))
-# print(ll.kth_node(5))
-
-# print(ll)
-# ll.reverse()
-# print(ll)
-# print(ll)
-
-# print(ll.tail == ll.head)
-# print(ll.head.value)
-
-# print(ll.value_at(0))
-# ll.__size = 100
-# print(ll.__size)
-
-# ll.add_first(12)
-# ll.add_first(90)
-# ll.add_first(67)
-# ll.add_first(34)
-
-# print(ll)
-
-# print(ll)
-# ll.delete_first()
-# print(ll)
-# ll.delete_first()
-# ll.delete_first()
-# ll.delete_first()
-# ll.delete_last()
-# ll.delete_last()
-# ll.delete_last()
-# ll.delete_last()
-# ll.delete_last()
-# print(ll)
