@@ -2,7 +2,7 @@ class Node:
     def __init__(self,value):
         self.value = value
         self.next = None
-        self.prev = None
+        # self.prev = None
 
 class LinkedList:
     def __init__(self):
@@ -164,6 +164,19 @@ class LinkedList:
         self.tail.next = None
         self.head = previous
 
+    def recursive_reverse(self,head,prev):
+        if not head:
+            return
+
+        self.recursive_reverse(head.next,head)
+        head.next = prev
+
+        if head == self.tail:
+            self.head = head
+        
+        if head.next == None:
+            self.tail = head
+
     def kth_node(self,k):
         pointer_1 = self.head
         pointer_2 = self.head
@@ -205,19 +218,12 @@ ll.add_last(1)
 ll.add_last(2)
 ll.add_last(3)
 
-# ll.print_reverse()
 print(ll)
 
-ll.make_doubly_linked(ll.head,None)
+ll.recursive_reverse(ll.head,None)
 
-print(ll.tail.next)
-print(ll.tail.value)
-print(ll.tail.prev.value)
-print(ll.tail.prev.prev.value)
-print(ll.tail.prev.prev.prev)
+print(ll)
 
-# curr = ll.tail
+ll.reverse()
 
-# while curr.prev:
-#     print(curr.value)
-#     curr = curr.prev
+print(ll)
