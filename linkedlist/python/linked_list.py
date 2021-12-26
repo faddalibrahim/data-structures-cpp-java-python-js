@@ -2,6 +2,7 @@ class Node:
     def __init__(self,value):
         self.value = value
         self.next = None
+        self.prev = None
 
 class LinkedList:
     def __init__(self):
@@ -188,6 +189,35 @@ class LinkedList:
         self.print_reverse(head.next)
         print(head.value)
 
+    def make_doubly_linked(self,head,prev):
+        if not head:
+            return
+
+        self.make_doubly_linked(head.next,head)
+        head.prev = prev
+
     # def clone()
     # def detect_cycle()
     # def to_array()
+
+ll = LinkedList()
+ll.add_last(1)
+ll.add_last(2)
+ll.add_last(3)
+
+# ll.print_reverse()
+print(ll)
+
+ll.make_doubly_linked(ll.head,None)
+
+print(ll.tail.next)
+print(ll.tail.value)
+print(ll.tail.prev.value)
+print(ll.tail.prev.prev.value)
+print(ll.tail.prev.prev.prev)
+
+# curr = ll.tail
+
+# while curr.prev:
+#     print(curr.value)
+#     curr = curr.prev
