@@ -223,7 +223,4 @@ print(ll)
 ll.recursive_reverse(ll.head,None)
 
 print(ll)
-
-ll.reverse()
-
-print(ll)
+print(ll.head.value)
