@@ -79,34 +79,34 @@ class BinaryTree:
         return traversal
 
 
-tree = BinaryTree("D")
-tree.insert("B")
-tree.insert("E")
-tree.insert("A")
-tree.insert("C")
-tree.insert("F")
+# tree = BinaryTree("D")
+# tree.insert("B")
+# tree.insert("E")
+# tree.insert("A")
+# tree.insert("C")
+# tree.insert("F")
 
-print(tree.search("A"))
-print(tree.search("B"))
-print(tree.search("C"))
-print(tree.search("D"))
-print(tree.search("E"))
-print(tree.search("F"))
-print(tree.search("G"))
+# print(tree.search("A"))
+# print(tree.search("B"))
+# print(tree.search("C"))
+# print(tree.search("D"))
+# print(tree.search("E"))
+# print(tree.search("F"))
+# print(tree.search("G"))
 # tree.insert(12)
 # print(tree.preorder_print(tree.root,""))
 # Set up tree
-# tree = BinaryTree(1)
-# tree.root.left = Node(2)
-# tree.root.right = Node(3)
-# tree.root.left.left = Node(4)
-# tree.root.left.right = Node(5)
+tree = BinaryTree(1)
+tree.root.left = Node(2)
+tree.root.right = Node(3)
+tree.root.left.left = Node(4)
+tree.root.left.right = Node(5)
 
 #       1
 #      / \
 #     2   3
 #    / \
-#    4  5
+#   4  5
 
 # Test search
 # Should be True
@@ -118,6 +118,13 @@ print(tree.search("G"))
 # Should be 1-2-4-5-3
 # print(tree.print_tree())
 
-# print(tree.preorder_print(tree.root,"")[:-1])
+print(tree.preorder_print(tree.root,"")[:-1])
 # print(tree.inorder_print(tree.root,"")[:-1])
 # print(tree.postorder_print(tree.root,"")[:-1])
+
+
+
+
+
+
+
