@@ -60,7 +60,6 @@ class BinaryTree(object):
                 q.append(current.right)
                 
         return summ
-
     def min(self):
         q = deque()
         q.append(self.root)
