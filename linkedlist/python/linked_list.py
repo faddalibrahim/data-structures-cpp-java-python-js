@@ -209,8 +209,8 @@ class LinkedList:
         self.make_doubly_linked(head.next,head)
         head.prev = prev
 
-    def is_cycle():
-        
+    # def is_cycle():
+
 
     # def clone()
     # def detect_cycle()
