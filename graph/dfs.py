@@ -10,10 +10,14 @@ graph = {
 def depthFirstPrint(graph,start):
     stack = [start]
 
+    
+
     while stack:
         current = stack.pop()
 
-        print(current)
+        if current in visited:
+            break
+
 
         for neighbour in graph[current]:
             stack.append(neighbour)
